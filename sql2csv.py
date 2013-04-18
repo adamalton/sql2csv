@@ -5,8 +5,7 @@ import sys
 def get_file_paths():
     #remove THIS filename from sys.argv if it's in there
     args = sys.argv
-    this_file_names = [__file__, __file__.rstrip('.py')]
-    if args[0] in this_file_names:
+    if __file__.rstrip('.py') in args[0]:
         del args[0]
     try:
         input_file_path = args[0]
